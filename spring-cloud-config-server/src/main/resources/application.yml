@@ -1,0 +1,22 @@
+server:
+  port: 9130
+management:
+  security:
+    enabled: false
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jjch99/spring-cloud-examples
+          search-paths: spring-cloud-config-repo
+          username:
+          password:
+          force-pull: true
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9010/eureka/
