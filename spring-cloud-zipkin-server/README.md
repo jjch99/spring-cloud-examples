@@ -9,4 +9,4 @@ java -jar zipkin.jar
 
 本示例直接调用官方`ZipkinServer`的`main`方法，打包时也未打入任何实际内容。
 
-实际应用时一般采用Kafka接收brave上报的数据，用ES来做存储。
+实际应用时一般采用Kafka接收brave上报的数据，用Elasticsearch来做存储。
