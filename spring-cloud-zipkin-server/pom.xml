@@ -13,7 +13,11 @@
 	<artifactId>spring-cloud-zipkin-server</artifactId>
 	<packaging>jar</packaging>
 
-	<name>spring-cloud-zipkin-server</name>
+	<name>zipkin-server</name>
+
+    <properties>
+        <zipkin.version>2.7.1</zipkin.version>
+    </properties>
 
 	<dependencies>
 		<dependency>
@@ -28,6 +32,47 @@
 			<groupId>io.zipkin.java</groupId>
 			<artifactId>zipkin-autoconfigure-ui</artifactId>
 		</dependency>
+        <dependency>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-autoconfigure-collector-kafka</artifactId>
+            <version>${zipkin.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.zipkin.java</groupId>
+            <artifactId>zipkin-autoconfigure-storage-elasticsearch-http</artifactId>
+            <version>${zipkin.version}</version>
+        </dependency>
 	</dependencies>
+
+    <build>
+        <finalName>zipkin</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <includes>
+                        <include>nothing</include>
+                    </includes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <executable>true</executable>
+                            <mainClass>zipkin.server.ZipkinServer</mainClass>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
