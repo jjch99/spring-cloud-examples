@@ -26,16 +26,16 @@
 	</properties>
 
 	<modules>
-		<module>spring-cloud-api-gateway</module>
-		<module>spring-cloud-eureka-consumer</module>
-		<module>spring-cloud-eureka-consumer-feign</module>
-		<module>spring-cloud-eureka-consumer-ribbon</module>
-		<module>spring-cloud-eureka-consumer-ribbon-hystrix</module>
-		<module>spring-cloud-eureka-provider</module>
 		<module>spring-cloud-eureka-server</module>
-		<module>spring-cloud-hystrix-dashboard</module>
-		<module>spring-cloud-zipkin-server</module>
-		<module>spring-cloud-config-server</module>
+        <module>spring-cloud-config-server</module>
+        <module>spring-cloud-zipkin-server</module>
+        <module>spring-cloud-hystrix-dashboard</module>
+        <module>spring-cloud-api-gateway</module>
+        <module>spring-cloud-service-provider</module>
+		<module>spring-cloud-service-consumer</module>
+		<module>spring-cloud-service-consumer-feign</module>
+		<module>spring-cloud-service-consumer-ribbon</module>
+		<module>spring-cloud-service-consumer-ribbon-hystrix</module>
 	</modules>
 
 	<dependencies>
