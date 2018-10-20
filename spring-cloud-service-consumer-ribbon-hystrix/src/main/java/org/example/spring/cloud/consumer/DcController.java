@@ -1,4 +1,4 @@
-package org.example.spring.cloud;
+package org.example.spring.cloud.consumer;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

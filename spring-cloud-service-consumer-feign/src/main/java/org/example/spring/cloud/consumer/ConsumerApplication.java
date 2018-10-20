@@ -1,4 +1,4 @@
-package org.example.spring.cloud;
+package org.example.spring.cloud.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 @EnableFeignClients
 @EnableEurekaClient
 @SpringBootApplication
-public class ConsumerFeignApplication {
+public class ConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ConsumerFeignApplication.class, args);
+		SpringApplication.run(ConsumerApplication.class, args);
 	}
 
 }

@@ -1,24 +1,25 @@
-package org.example.spring.cloud;
+package org.example.spring.cloud.provider;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DcController {
 
-	private static final Log logger = LogFactory.getLog(DcController.class);
+	private final Log logger = LogFactory.getLog(getClass());
 
 	@Autowired
-	private DcProvider dcProvider;
+	private DiscoveryClient discoveryClient;
 
 	@GetMapping("/dc")
 	public String dc() {
-		String ret = dcProvider.dc() + "[consumer-feign]";
-		logger.info(ret);
-		return ret;
+		String services = "Services: " + discoveryClient.getServices();
+		logger.info(services);
+		return services;
 	}
 
 }
