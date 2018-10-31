@@ -17,8 +17,10 @@ spring:
         enabled: true
         prefix: config
         data-key: configuration
-        format: properties
+        format: PROPERTIES
         default-context: ${spring.application.name}
+        watch:
+          enabled: true
 
 management:
   context-path: /manage
