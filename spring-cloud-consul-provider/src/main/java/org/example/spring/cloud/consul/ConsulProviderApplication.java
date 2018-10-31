@@ -1,7 +1,5 @@
 package org.example.spring.cloud.consul;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
