@@ -37,6 +37,7 @@
 		<module>spring-cloud-service-consumer-ribbon-hystrix</module>
 		<module>spring-cloud-config-server</module>
 		<module>spring-cloud-config-client</module>
+		<module>spring-cloud-config-server-db</module>
 		<module>spring-cloud-config-server-bus</module>
 		<module>spring-cloud-config-client-bus</module>
 	</modules>
