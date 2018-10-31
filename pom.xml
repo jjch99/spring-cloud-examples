@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.14.RELEASE</version>
+		<version>1.5.15.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -27,7 +27,6 @@
 
 	<modules>
 		<module>spring-cloud-eureka-server</module>
-        <module>spring-cloud-config-server</module>
         <module>spring-cloud-zipkin-server</module>
         <module>spring-cloud-hystrix-dashboard</module>
         <module>spring-cloud-api-gateway</module>
@@ -36,6 +35,10 @@
 		<module>spring-cloud-service-consumer-feign</module>
 		<module>spring-cloud-service-consumer-ribbon</module>
 		<module>spring-cloud-service-consumer-ribbon-hystrix</module>
+		<module>spring-cloud-config-server</module>
+		<module>spring-cloud-config-client</module>
+		<module>spring-cloud-config-server-bus</module>
+		<module>spring-cloud-config-client-bus</module>
 	</modules>
 
 	<dependencies>

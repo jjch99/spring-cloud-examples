@@ -1,0 +1,32 @@
+server:
+  port: 9131
+management:
+  security:
+    enabled: false
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers: devhost:8092
+          zkNodes: devhost:8181
+          configuration:
+            auto:
+              offset:
+                reset: latest
+    config:
+      server:
+        git:
+          uri: https://github.com/jjch99/spring-cloud-examples
+          search-paths: spring-cloud-config-repo
+          username:
+          password:
+          force-pull: true
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9010/eureka/
