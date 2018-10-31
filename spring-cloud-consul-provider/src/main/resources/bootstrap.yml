@@ -1,0 +1,26 @@
+server:
+  port: 9600
+
+spring:
+  application:
+    name: consul-provider
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        tags: foo=bar, baz
+        instance-id: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+        healthCheckPath: ${management.context-path}/health
+        healthCheckInterval: 15s
+      config:
+        enabled: true
+        prefix: config
+        data-key: configuration
+        format: properties
+        default-context: ${spring.application.name}
+
+management:
+  context-path: /manage
+  security:
+    enabled: false

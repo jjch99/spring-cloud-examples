@@ -40,6 +40,7 @@
 		<module>spring-cloud-config-server-db</module>
 		<module>spring-cloud-config-server-bus</module>
 		<module>spring-cloud-config-client-bus</module>
+		<module>spring-cloud-consul-provider</module>
 	</modules>
 
 	<dependencies>
