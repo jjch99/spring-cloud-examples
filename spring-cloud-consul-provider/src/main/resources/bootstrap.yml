@@ -3,10 +3,10 @@ server:
 
 spring:
   application:
-    name: consul-provider
+    name: service-provider
   cloud:
     consul:
-      host: localhost
+      host: devhost
       port: 8500
       discovery:
         tags: foo=bar, baz
